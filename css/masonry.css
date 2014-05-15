@@ -1,0 +1,49 @@
+/* Theme */
+
+.masonry-block {
+	background:#eee;
+}
+.masonry-title, .masonry-content {
+	padding:1em;
+}
+.masonry-title {
+	font-size:1.4em;
+	background:#222;
+	color:#fff;
+}
+.masonry-content p:last-child {
+	margin-bottom: 0;
+}
+
+/* Layout */
+
+#masonry-container {
+	position:relative;
+	margin-left:-4%;
+}
+.masonry-block {
+	width:29.33%;
+	margin-left:4%;
+	margin-bottom:1.5em;
+}
+.masonry-block img {
+	width:100%;
+	display:block;
+}
+
+@media only screen and ( max-width: 960px ) {
+	.masonry-block {
+		width:46%;
+		margin-left:4%;
+	}
+}
+@media only screen and ( max-width: 767px) {
+	#masonry-container {
+		margin-left:0;
+	}
+	.masonry-block {
+		position:inherit;
+		margin-left:0;
+		width:100%;
+	}
+}
