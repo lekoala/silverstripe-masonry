@@ -31,13 +31,18 @@ class MasonryPage_Controller extends Page_Controller {
 		Requirements::javascript('masonry/javascript/masonry.pkgd.min.js');
 		Requirements::customScript(<<<JS
 var msnry = new Masonry( '#masonry-container', {
-  itemSelector: '.masonry-block'
+  itemSelector: '.masonry-block',
 });
+var msnryTimer = null;
 imagesLoaded( '#masonry-container', function() {
   msnry.layout();
+  msnry.unbindResize()
 });
 $(window).resize(function () {
-   msnry.bindResize();
+	clearTimeout(msnryTimer);
+	msnryTimer = setTimeout(function() {
+		msnry.layout();
+	},100);
 });
 JS
 		);

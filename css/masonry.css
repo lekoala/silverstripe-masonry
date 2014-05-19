@@ -4,10 +4,10 @@
 	background:#eee;
 }
 .masonry-title, .masonry-content {
-	padding:1em;
+	padding:0.6em;
 }
 .masonry-title {
-	font-size:1.4em;
+	font-size:1.2em;
 	background:#222;
 	color:#fff;
 }
@@ -31,7 +31,7 @@
 	display:block;
 }
 
-@media only screen and ( max-width: 960px ) {
+@media only screen and ( max-width: 1024px ) {
 	.masonry-block {
 		width:46%;
 		margin-left:4%;
